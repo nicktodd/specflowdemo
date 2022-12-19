@@ -26,7 +26,12 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    
 
+- task: SpecFlowPlus@0
+  inputs:
+    generatorSource: 'FeatureFolder'
+    projectName: 'CucumberExample'
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
